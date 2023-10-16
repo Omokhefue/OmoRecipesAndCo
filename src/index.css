@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: rgb(184, 184, 128);
+  --secondary: rgba(184, 184, 128, 0.79);
+}
+body {
+  padding-top: 16vh;
+  padding-bottom: 8vh;
+}

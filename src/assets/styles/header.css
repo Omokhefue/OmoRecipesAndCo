@@ -1,0 +1,83 @@
+header {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 13vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary);
+  color: rgb(131, 110, 110);
+  padding: 0 1rem;
+  z-index: 1;
+}
+header h1 {
+  margin-right: auto;
+  cursor: pointer;
+}
+nav {
+  display: flex;
+}
+nav a {
+  text-decoration: none;
+  margin-right: 0.4rem;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-size: bolder;
+  transition: background-color 0.3s;
+}
+nav a.active {
+  background-color: coral;
+}
+nav a:hover {
+  background-color: coral;
+}
+.profile-icon {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+header div img {
+  width: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.4rem;
+  border-radius: 1rem;
+}
+.close-btn,
+.hamburger-menu {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .profile-icon {
+    display: none;
+  }
+  nav {
+    margin-top: 0.2rem;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 10vh;
+    background-color: rgba(90, 76, 76, 0.2);
+  }
+  nav a {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.6rem;
+    color: rgb(101, 98, 98);
+    transition: background-color 0.26s, color 0.26s;
+  }
+  nav a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: black;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+}
