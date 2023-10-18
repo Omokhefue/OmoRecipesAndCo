@@ -17,10 +17,10 @@ const Header = () => {
   return (
     <header>
       <h1>MoRecipes</h1>
-      <nav >
+      <nav>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/category">Category</NavLink>
-        <NavLink to="/other">More</NavLink>
+        <NavLink to="/categories">Category</NavLink>
+        <NavLink to="/recipes">Recipes</NavLink>
       </nav>
       <div className="profile-icon">
         <img src="../../src/assets/svg/user-regular.svg" alt="profile-image" />
