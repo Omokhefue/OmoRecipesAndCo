@@ -21,6 +21,9 @@ const Header = () => {
         <NavLink to="/">Home</NavLink>
         <NavLink to="/categories">Category</NavLink>
         <NavLink to="/recipes">Recipes</NavLink>
+        <NavLink to="/submit-recipe">Submit</NavLink>
+        <NavLink to="/register">Signup</NavLink>
+        <NavLink to="/login">Login</NavLink>
       </nav>
       <div className="profile-icon">
         <img src="../../src/assets/svg/user-regular.svg" alt="profile-image" />

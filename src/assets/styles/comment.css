@@ -82,3 +82,8 @@
 .comment-like img {
   margin-right: 2rem;
 }
+.no-comment {
+  text-align: center;
+  color: rgb(176, 165, 165);
+  font-weight: 1000;
+}

@@ -1,15 +1,5 @@
-import { useLoaderData } from "react-router-dom";
-
-const RecipePreview = ({ category }) => {
-  let recipes;
-
-  if (category) {
-    recipes = category.recipes;
-  } else {
-    const data = useLoaderData();
-    recipes = data;
-  }
-
+const RecipePreview = ({ recipes }) => {
+  console.log(recipes);
   return (
     <>
       <section className="preview-section">
@@ -32,9 +22,3 @@ const RecipePreview = ({ category }) => {
   );
 };
 export default RecipePreview;
-
-export const RecipesLoader = async ({}) => {
-  const res = await fetch("http://localhost:5000/api/v1/recipes/latest");
-  const data = await res.json();
-  return data;
-};

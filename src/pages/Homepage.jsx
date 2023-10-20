@@ -1,12 +1,9 @@
-import { Link } from "react-router-dom";
-import CategoryPreview, {
-  CategoriesLoader,
-} from "../components/category/CategoryPreview";
-import RecipePreview, {
-  RecipesLoader,
-} from "../components/recipe/RecipePreview";
+import { Link, useLoaderData } from "react-router-dom";
+import CategoryPreview from "../components/category/CategoryPreview";
+import RecipePreview from "../components/recipe/RecipePreview";
 
 export const Homepage = () => {
+  const { recipes, categories } = useLoaderData();
   return (
     <section className="home">
       <div className="hero-section">
@@ -18,14 +15,14 @@ export const Homepage = () => {
             mouthwatering recipes.
           </p>
 
-          <Link href="#recipes" className="cta-button">
-            Get Started
+          <Link to="random-recipe" className="cta-button">
+            Random Recipe
           </Link>
         </div>
       </div>
       {/* category preview component */}
       <h2 className="preview-section-title">Categories</h2>
-      <CategoryPreview />
+      <CategoryPreview categories={categories} />
       <Link to="/categories" className="preview-section-link">
         <button className="preview-section-button">
           Check out more Categories
@@ -34,7 +31,7 @@ export const Homepage = () => {
       {/* recipe preview component */}
 
       <h2 className="preview-section-title">Recipes</h2>
-      <RecipePreview />
+      <RecipePreview recipes={recipes} />
       <Link to="/recipes" className="preview-section-link">
         <button className="preview-section-button">
           Check out more Recipes
@@ -42,4 +39,12 @@ export const Homepage = () => {
       </Link>
     </section>
   );
+};
+
+export const HomePageLoader = async () => {
+  const res = await fetch("http://localhost:5000/api/v1/recipes/random");
+  const recipes = await res.json();
+  const data = await fetch(" http://localhost:5000/api/v1/categories/homepage");
+  const categories = await data.json();
+  return { recipes, categories };
 };
