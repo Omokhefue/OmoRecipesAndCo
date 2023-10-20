@@ -1,0 +1,24 @@
+.recipe-form {
+  width: 80%;
+  min-height: 60vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightblue;
+}
+.recipe-form h1 {
+  text-align: center;
+  margin: 2rem 0;
+}
+.recipe-form input::placeholder{
+letter-spacing: 2px;
+text-transform: lowercase;
+font-size: .7rem;
+}
+.recipe-form-button {
+  border: none;
+  padding: 0.5em;
+  box-shadow: -0.5px 3px 9px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
